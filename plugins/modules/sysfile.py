@@ -75,9 +75,10 @@ options:
 
 
 EXAMPLES = '''
-- name: Register node
-  ibm.spectrum_protect.sysfile:
-    state: present
+- name: Create dsm.sys
+  ibm.storage_protect.sysfile:
+    server_name: "ibmsp01"
+    tcp_server_address: "10.10.10.10"
 '''
 
 from ansible.module_utils.basic import AnsibleModule, env_fallback
